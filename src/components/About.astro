@@ -1,0 +1,46 @@
+---
+import { site } from '../data/site';
+---
+
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="container">
+    <header class="section__head">
+      <h2 class="section__title" id="about-title">About</h2>
+      <span class="meta">03 / 04</span>
+    </header>
+
+    <div class="about" data-reveal>
+      <div>
+        <p class="about__lead">
+          Information Systems student.<br />
+          Software builder.<br />
+          <em>Systems enthusiast.</em>
+        </p>
+      </div>
+
+      <div>
+        <div class="about__body">
+          <p>
+            Interested in software, AI, backend systems, automation,
+            hardware, and design. Based in {site.location}.
+          </p>
+        </div>
+
+        <ul class="about__list">
+          <li>
+            <span>Age</span>
+            <span>{site.age}</span>
+          </li>
+          <li>
+            <span>Based</span>
+            <span>{site.location}</span>
+          </li>
+          <li>
+            <span>Status</span>
+            <span>Available for selected work</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

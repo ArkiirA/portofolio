@@ -1,0 +1,31 @@
+---
+import { site } from '../data/site';
+---
+
+<div id="boot" class="boot" role="dialog" aria-label="System boot sequence">
+  <div class="boot__inner">
+    <div class="boot__head">
+      <strong>{site.bios.system}</strong>
+      <span>{site.bios.version}</span>
+    </div>
+
+    <div class="boot__lines" data-boot-lines aria-live="polite"></div>
+
+    <div class="boot__bar" data-boot-bar aria-live="polite"></div>
+
+    <div class="boot__ready" data-boot-ready hidden></div>
+
+    <button
+      type="button"
+      class="boot__enter"
+      data-boot-enter
+      hidden
+    >
+      [ ENTER ]
+    </button>
+  </div>
+
+  <button type="button" class="boot__skip" data-boot-skip hidden>
+    Skip boot &rarr;
+  </button>
+</div>

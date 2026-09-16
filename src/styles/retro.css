@@ -1,0 +1,493 @@
+/* ============================================================
+   RETRO MODE — late-1990s personal homepage
+   ============================================================ */
+
+.retro-site {
+  --r-bg: #000080;
+  --r-bg-alt: #0000c0;
+  --r-text: #ffffff;
+  --r-yellow: #ffff00;
+  --r-cyan: #00ffff;
+  --r-lime: #00ff00;
+  --r-magenta: #ff00ff;
+  --r-red: #ff0000;
+  --r-gray: #c0c0c0;
+  --r-gray-dark: #808080;
+  --r-black: #000000;
+
+  background: var(--r-bg);
+  color: var(--r-text);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 1.35;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.retro-site a { color: var(--r-cyan); text-decoration: underline; }
+.retro-site a:visited { color: var(--r-magenta); }
+.retro-site a:hover { color: var(--r-yellow); }
+
+/* tiled starfield-ish background */
+.retro-site::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.35) 1px, transparent 1px),
+    radial-gradient(circle at 70% 60%, rgba(255,255,255,0.25) 1px, transparent 1px),
+    radial-gradient(circle at 40% 80%, rgba(255,255,255,0.3) 1px, transparent 1px),
+    radial-gradient(circle at 90% 20%, rgba(255,255,255,0.2) 1px, transparent 1px);
+  background-size: 120px 120px, 180px 180px, 90px 90px, 200px 200px;
+  opacity: 0.6;
+}
+
+.retro-site > * { position: relative; z-index: 1; }
+
+.retro-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 8px;
+}
+
+/* ---------- header banner ---------- */
+
+.retro-header {
+  text-align: center;
+  padding: 14px 8px;
+  background: linear-gradient(180deg, #ff00ff 0%, #0000ff 50%, #00ffff 100%);
+  border: 3px ridge var(--r-gray);
+  margin-bottom: 8px;
+}
+
+.retro-header h1 {
+  font-family: 'Comic Sans MS', 'Times New Roman', cursive;
+  font-size: 42px;
+  margin: 0;
+  color: var(--r-yellow);
+  text-shadow: 3px 3px 0 var(--r-black), -1px -1px 0 var(--r-black);
+  letter-spacing: 1px;
+  transform: skew(-4deg);
+}
+
+.retro-header p {
+  margin: 6px 0 0;
+  color: var(--r-yellow);
+  font-size: 14px;
+  font-family: 'Comic Sans MS', cursive;
+  text-shadow: 1px 1px 0 var(--r-black);
+}
+
+/* ---------- nav ---------- */
+
+.retro-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+  padding: 8px;
+  background: var(--r-black);
+  border: 3px ridge var(--r-gray);
+  margin-bottom: 8px;
+}
+
+.retro-nav a {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--r-gray);
+  color: var(--r-black);
+  border: 2px outset var(--r-gray);
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.retro-nav a:hover {
+  background: var(--r-yellow);
+  color: var(--r-black);
+  border-style: inset;
+  text-decoration: none;
+}
+
+/* ---------- marquee ---------- */
+
+.retro-marquee {
+  background: var(--r-black);
+  color: var(--r-lime);
+  padding: 4px 0;
+  border: 2px inset var(--r-gray);
+  margin-bottom: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.retro-marquee span {
+  display: inline-block;
+  animation: retro-marquee 18s linear infinite;
+  padding-left: 100%;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+}
+
+@keyframes retro-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+/* ---------- panels ---------- */
+
+.retro-panel {
+  background: var(--r-bg-alt);
+  border: 3px ridge var(--r-gray);
+  padding: 10px 14px;
+  margin-bottom: 8px;
+}
+
+.retro-panel h2 {
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 22px;
+  color: var(--r-yellow);
+  margin: 0 0 8px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.retro-panel p { margin: 6px 0; font-size: 14px; }
+.retro-panel ul { margin: 6px 0; padding-left: 22px; }
+.retro-panel li { margin: 3px 0; font-size: 14px; }
+
+/* ---------- visitor counter ---------- */
+
+.retro-counter {
+  display: inline-block;
+  font-family: 'Courier New', monospace;
+  font-size: 20px;
+  font-weight: bold;
+  background: var(--r-black);
+  color: var(--r-lime);
+  padding: 4px 10px;
+  border: 2px inset var(--r-gray);
+  letter-spacing: 3px;
+}
+
+/* ---------- retro project ---------- */
+
+.retro-project {
+  border: 2px dashed var(--r-cyan);
+  padding: 10px;
+  margin-bottom: 12px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.retro-project h3 {
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 18px;
+  color: var(--r-yellow);
+  margin: 0 0 6px;
+  text-transform: uppercase;
+}
+
+.retro-project .retro-blink {
+  color: var(--r-red);
+  font-weight: bold;
+  animation: retro-blink 1s steps(2, start) infinite;
+}
+
+.retro-project .retro-tagline {
+  font-style: italic;
+  color: var(--r-cyan);
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.retro-download {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--r-gray);
+  color: var(--r-black) !important;
+  border: 3px outset var(--r-gray);
+  font-family: 'Comic Sans MS', cursive;
+  text-decoration: none !important;
+  font-size: 13px;
+  margin-top: 6px;
+  text-transform: uppercase;
+}
+
+.retro-download:hover {
+  background: var(--r-yellow);
+  border-style: inset;
+}
+
+@keyframes retro-blink {
+  50% { visibility: hidden; }
+}
+
+/* ---------- under construction ---------- */
+
+.retro-construction {
+  text-align: center;
+  padding: 12px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--r-yellow),
+    var(--r-yellow) 12px,
+    var(--r-black) 12px,
+    var(--r-black) 24px
+  );
+  border: 3px ridge var(--r-gray);
+  margin-bottom: 8px;
+}
+
+.retro-construction strong {
+  display: inline-block;
+  background: var(--r-black);
+  color: var(--r-yellow);
+  padding: 6px 14px;
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+/* ---------- footer ---------- */
+
+.retro-footer {
+  text-align: center;
+  padding: 10px;
+  background: var(--r-black);
+  border: 3px ridge var(--r-gray);
+  font-size: 12px;
+  color: var(--r-gray);
+  font-family: 'Courier New', monospace;
+}
+
+.retro-footer p { margin: 4px 0; }
+
+.retro-return {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 18px;
+  background: var(--r-lime);
+  color: var(--r-black) !important;
+  border: 3px outset var(--r-gray);
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 15px;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.retro-return:hover {
+  background: var(--r-yellow);
+  border-style: inset;
+}
+
+/* ---------- guestbook ---------- */
+
+.retro-guestbook {
+  background: #ffffff;
+  color: #000000;
+  border: 3px inset var(--r-gray);
+  padding: 10px;
+  font-family: 'Times New Roman', serif;
+  font-size: 13px;
+}
+
+.retro-guestbook h3 {
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 16px;
+  color: #000080;
+  margin: 0 0 8px;
+}
+
+.retro-guestbook .retro-entry {
+  border-bottom: 1px dotted #666;
+  padding: 6px 0;
+}
+
+.retro-guestbook .retro-entry strong { color: #000080; }
+.retro-guestbook .retro-entry em { color: #666; font-size: 11px; }
+
+/* ---------- 800x600 hint ---------- */
+
+.retro-bestviewed {
+  text-align: center;
+  font-size: 11px;
+  color: var(--r-gray);
+  font-family: 'Courier New', monospace;
+  margin: 6px 0;
+}
+
+/* ============================================================
+   RETRO POLISH — additions
+   ============================================================ */
+
+/* Animated construction bar (replaces the static striped block) */
+.retro-construction-anim {
+  height: 24px;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      var(--r-yellow) 0,
+      var(--r-yellow) 20px,
+      var(--r-black) 20px,
+      var(--r-black) 40px
+    );
+  background-size: 56px 56px;
+  border: 3px ridge var(--r-gray);
+  margin-bottom: 8px;
+  animation: retro-construction-slide 2s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes retro-construction-slide {
+  from { background-position: 0 0; }
+  to   { background-position: 56px 0; }
+}
+
+/* Netscape "best viewed" badge */
+.retro-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.retro-badge {
+  display: inline-block;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  padding: 3px 8px;
+  background: var(--r-black);
+  color: var(--r-lime);
+  border: 2px outset var(--r-gray);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.retro-badge--yellow { color: var(--r-yellow); }
+.retro-badge--cyan   { color: var(--r-cyan); }
+.retro-badge--red    { color: var(--r-red); }
+
+/* Visitor counter with odometer feel */
+.retro-counter-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  margin: 6px 0;
+}
+
+/* Under construction hammer icon (unicode, styled) */
+.retro-hammer {
+  display: inline-block;
+  animation: retro-hammer-swing 1.4s ease-in-out infinite;
+  transform-origin: 80% 80%;
+  font-size: 20px;
+}
+
+@keyframes retro-hammer-swing {
+  0%, 100% { transform: rotate(-15deg); }
+  50%      { transform: rotate(15deg); }
+}
+
+/* Blinking NEW! badge */
+.retro-new {
+  display: inline-block;
+  background: var(--r-red);
+  color: var(--r-yellow);
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 10px;
+  padding: 1px 5px;
+  border: 1px solid var(--r-yellow);
+  text-transform: uppercase;
+  vertical-align: super;
+  margin-left: 4px;
+  animation: retro-blink 1s steps(2, start) infinite;
+}
+
+/* Fake broken image placeholder */
+.retro-broken {
+  display: inline-block;
+  width: 40px;
+  height: 30px;
+  border: 1px solid var(--r-gray);
+  background: var(--r-gray);
+  position: relative;
+  vertical-align: middle;
+}
+
+.retro-broken::before,
+.retro-broken::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-top: 2px solid var(--r-red);
+}
+
+.retro-broken::before { transform: rotate(38deg); transform-origin: 0 0; }
+.retro-broken::after  { transform: rotate(-38deg); transform-origin: 100% 0; }
+
+/* Marquee with slight bottom border like real old <marquee> */
+.retro-marquee {
+  border-bottom: 2px inset var(--r-gray);
+}
+
+/* Guestbook entry hover */
+.retro-guestbook .retro-entry:hover {
+  background: #ffffcc;
+}
+
+/* Webring footer block */
+.retro-webring {
+  text-align: center;
+  padding: 8px;
+  background: #000040;
+  border: 2px inset var(--r-gray);
+  margin: 8px 0;
+  font-size: 12px;
+  font-family: 'Courier New', monospace;
+  color: var(--r-cyan);
+}
+
+.retro-webring a {
+  color: var(--r-yellow);
+  margin: 0 8px;
+}
+
+/* Sound toggle button for retro */
+.retro-sound-toggle {
+  display: inline-block;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  padding: 3px 8px;
+  background: var(--r-gray);
+  color: var(--r-black);
+  border: 2px outset var(--r-gray);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.retro-sound-toggle:hover {
+  background: var(--r-yellow);
+  border-style: inset;
+}
+
+/* Reduced motion overrides for the new animations */
+@media (prefers-reduced-motion: reduce) {
+  .retro-construction-anim { animation: none; }
+  .retro-hammer { animation: none; }
+  .retro-new { animation: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .retro-marquee span { animation: none; padding-left: 0; }
+  .retro-project .retro-blink { animation: none; }
+}

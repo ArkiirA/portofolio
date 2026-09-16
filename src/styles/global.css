@@ -1,0 +1,196 @@
+/* ============================================================
+   GLOBAL — tokens, reset, typography primitives
+   ============================================================ */
+
+:root {
+  --paper: #f4f1ea;
+  --paper-warm: #efe9dd;
+  --ink: #14110f;
+  --ink-soft: #2a2622;
+  --graphite: #57514a;
+  --muted: #8a837a;
+  --rule: #d9d2c4;
+  --accent: #8a3324;
+
+  --s-1: 0.5rem;
+  --s-2: 1rem;
+  --s-3: 1.5rem;
+  --s-4: 2rem;
+  --s-5: 3rem;
+  --s-6: 4rem;
+  --s-7: 6rem;
+  --s-8: 8rem;
+  --s-9: 12rem;
+
+  --font-sans: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Instrument Serif', 'Cormorant Garamond', 'Source Serif', Georgia, serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', 'IBM Plex Mono', Menlo, monospace;
+
+  --fs-meta: 0.6875rem;
+  --fs-small: 0.8125rem;
+  --fs-body: 1rem;
+  --fs-lead: 1.25rem;
+  --fs-h3: 1.75rem;
+  --fs-h2: 2.75rem;
+  --fs-h1: 4.5rem;
+  --fs-display: clamp(2.75rem, 9vw, 8.5rem);
+
+  --lh-tight: 1.02;
+  --lh-snug: 1.2;
+  --lh-body: 1.55;
+
+  --tracking-meta: 0.14em;
+  --tracking-tight: -0.02em;
+
+  --maxw: 78rem;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-feature-settings: 'ss01', 'cv11', 'calt';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.meta {
+  font-size: var(--fs-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.rule {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 0;
+}
+
+.serif {
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.section {
+  padding-block: clamp(4rem, 10vw, 9rem);
+}
+
+.section__head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: var(--s-3);
+  padding-bottom: var(--s-3);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: clamp(2.5rem, 6vw, 5rem);
+}
+
+.section__title {
+  font-size: var(--fs-h2);
+  font-weight: 500;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--lh-snug);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+[data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  [data-reveal] { opacity: 1; transform: none; }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --fs-h2: 2rem;
+    --fs-h1: 2.5rem;
+  }
+}

@@ -1,0 +1,168 @@
+---
+import { site } from '../data/site';
+import { projects } from '../data/projects';
+import { philosophy } from '../data/philosophy';
+---
+
+<div class="retro-site" aria-label="1998 archive of this website">
+  <div class="retro-container">
+    <header class="retro-header">
+      <h1>RIFKI'S HOMEPAGE</h1>
+      <p>WELCOME, INTERNET USER!</p>
+    </header>
+
+    <nav class="retro-nav" aria-label="Retro navigation">
+      <a href="#retro-about">ABOUT ME</a>
+      <a href="#retro-projects">PROJECTS</a>
+      <a href="#retro-computer">MY COMPUTER</a>
+      <a href="#retro-guestbook">GUESTBOOK</a>
+      <a href="#retro-email">EMAIL ME</a>
+    </nav>
+
+    <div class="retro-marquee" aria-hidden="true">
+      <span>
+        ★ WELCOME TO MY HOMEPAGE ★ BEST VIEWED IN NETSCAPE NAVIGATOR 4.0 ★
+        SIGN MY GUESTBOOK ★ THIS PAGE IS ALWAYS UNDER CONSTRUCTION ★
+      </span>
+    </div>
+
+    <section class="retro-panel" id="retro-about">
+      <h2>About Me</h2>
+      <p>
+        Hi! My name is <strong>Rifki</strong> and I am an Information Systems
+        student from Indonesia. I like computers, programming, and figuring
+        out how things work.
+      </p>
+      <p>
+        I made this website by hand. Please be patient if it loads slowly — I
+        am still learning!
+      </p>
+     <p class="retro-counter-wrap">
+  <span>You are visitor number:</span>
+  <span class="retro-counter" data-retro-counter>001337</span> 
+  <span class="retro-new">New!</span>
+     </p>
+    </section>
+
+    <div class="retro-construction-anim" aria-hidden="true"></div>
+<div class="retro-construction">
+  <strong>
+    <span class="retro-hammer" aria-hidden="true">&#128296;</span>
+    &nbsp;THIS PAGE IS UNDER CONSTRUCTION&nbsp;
+    <span class="retro-hammer" aria-hidden="true">&#128296;</span>
+  </strong>
+</div>
+
+    <section class="retro-panel" id="retro-projects">
+      <h2>My Projects</h2>
+
+      {projects.map((p) => (
+        <article class="retro-project">
+          <h3>{p.retro.title}</h3>
+          <p class="retro-tagline">{p.retro.tagline}</p>
+          <p>
+            STATUS: <span class="retro-blink">{p.retro.status}</span>
+          </p>
+          <p style="font-size:12px;color:#c0c0c0;">
+            {p.stack.join(' / ')}
+          </p>
+          <a class="retro-download" href="#retro-projects">
+            &#128190; DOWNLOAD
+          </a>
+        </article>
+      ))}
+    </section>
+
+    <section class="retro-panel" id="retro-computer">
+      <h2>My Computer</h2>
+      <p>Here are the specs of my computer:</p>
+      <ul>
+        <li>CPU: Pentium-class, very fast</li>
+        <li>RAM: enough for the internet</li>
+        <li>OS: Linux (I compile it myself)</li>
+        <li>Modem: 56k, blazing speed</li>
+      </ul>
+      <p style="font-size:12px;color:#c0c0c0;">
+        Best viewed at 800&times;600 resolution.
+      </p>
+    </section>
+
+    <section class="retro-panel" id="retro-guestbook">
+      <h2>Guestbook</h2>
+      <div class="retro-guestbook">
+        <h3>Sign My Guestbook!</h3>
+        <div class="retro-entry">
+          <strong>CoolDude98</strong> <em>— 03/14/1998</em>
+          <p>Nice homepage!! Check out mine too!!!</p>
+        </div>
+        <div class="retro-entry">
+          <strong>webmaster</strong> <em>— 03/15/1998</em>
+          <p>Thanks for visiting. More updates soon.</p>
+        </div>
+        <div class="retro-entry">
+          <strong>anonymous</strong> <em>— 04/02/1998</em>
+          <p>How did you make the background blue? Very cool.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="retro-panel" id="retro-email">
+      <h2>Email Me</h2>
+      <p>
+  You can email me at
+  <a href={`mailto:${site.email}?subject=Hello%20from%20your%20homepage`}>
+    {site.email}
+  </a>
+</p>
+<p style="font-size:11px;color:#c0c0c0;">
+  Clicking opens your email program. Please allow up to 3 business days for a reply.
+</p>
+
+      <p>
+        Please no spam! I only have a 56k connection.
+      </p>
+    </section>
+
+   <div class="retro-badges" aria-hidden="true">
+  <span class="retro-badge retro-badge--yellow">Best viewed in Netscape</span>
+  <span class="retro-badge retro-badge--cyan">800&times;600</span>
+  <span class="retro-badge retro-badge--red">256 colors</span>
+  <span class="retro-badge">HTML 3.2</span>
+  <span class="retro-badge retro-badge--yellow">Made with Notepad</span>
+</div>
+
+<p class="retro-bestviewed">
+  BEST VIEWED IN NETSCAPE NAVIGATOR &mdash; 800&times;600 &mdash; 256 COLORS
+  &nbsp; <span class="retro-broken" aria-hidden="true"></span> &nbsp;
+  <span class="retro-new">New!</span>
+</p>
+    <footer class="retro-footer">
+      <p>Copyright 1998 Rifki. All Rights Reserved.</p>
+      <p>Made with Notepad and a lot of patience.</p>
+      <a
+        class="retro-return"
+        href="#2026"
+        data-return-present
+      >
+        RETURN TO 2026 &rarr;
+      </a>
+      <button
+  type="button"
+  class="retro-sound-toggle"
+  data-retro-sound
+  aria-label="Toggle retro sound effects"
+>
+  Sound: OFF
+</button>
+      <div class="retro-webring">
+  &#9670; This site is part of the <a href="#retro-about">INDONESIAN DEV WEBRING</a> &#9670;
+  <br />
+  <a href="#retro-about">&laquo; Prev</a>
+  &middot;
+  <a href="#retro-about">Random</a>
+  &middot;
+  <a href="#retro-about">Next &raquo;</a>
+</div>
+    </footer>
+  </div>
+</div>

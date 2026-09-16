@@ -1,0 +1,29 @@
+---
+import { site } from '../data/site';
+---
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a class="nav__brand" href="#top" aria-label="Back to top">
+      <strong>RIFKI RABBANI</strong>
+      <span>/ {site.bios.version}</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#philosophy">Philosophy</a>
+      <a href="#work">Work</a>
+      <a href="#experiments">Experiments</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button
+      type="button"
+      class="nav__time"
+      data-time-travel
+      aria-label="Travel back in time to 1998"
+    >
+      TIME TRAVEL &rarr;
+    </button>
+  </div>
+</header>

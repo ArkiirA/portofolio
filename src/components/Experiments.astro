@@ -1,0 +1,20 @@
+---
+import { experiments } from '../data/projects';
+---
+
+<section class="section" id="experiments" aria-labelledby="experiments-title">
+  <div class="container">
+    <header class="section__head">
+      <h2 class="section__title" id="experiments-title">Experiments</h2>
+      <span class="meta">Index</span>
+    </header>
+
+    <div class="experiments__grid">
+      {experiments.map((name, i) => (
+        <div class="experiment" data-index={String(i + 1).padStart(2, '0')}>
+          {name}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

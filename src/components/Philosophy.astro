@@ -1,0 +1,28 @@
+---
+import { philosophy } from '../data/philosophy';
+---
+
+<section class="section" id="philosophy" aria-labelledby="philosophy-title">
+  <div class="container">
+    <header class="section__head">
+      <h2 class="section__title" id="philosophy-title">Operating Philosophy</h2>
+      <span class="meta">01 / 04</span>
+    </header>
+
+    <div class="philosophy__list">
+      {philosophy.map((p) => (
+        <article class="principle" data-reveal>
+          <div class="principle__index">{p.index}</div>
+          <div>
+            <h3 class="principle__title">{p.title}</h3>
+            <div class="principle__body">
+              {p.body.map((line) =>
+                line === '' ? <p>&nbsp;</p> : <p>{line}</p>
+              )}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

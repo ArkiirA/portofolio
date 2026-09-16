@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#f4f1ea"/>
+
+  <!-- thin outer rule -->
+  <rect x="48" y="48" width="1104" height="534" fill="none" stroke="#d9d2c4" stroke-width="1"/>
+
+  <!-- metadata row -->
+  <text x="80" y="110" font-family="Inter, Helvetica, sans-serif"
+        font-size="16" letter-spacing="2.5" fill="#8a837a"
+        font-weight="500">RIFKI RABBANI / PORTFOLIO</text>
+
+  <line x1="80" y1="130" x2="1120" y2="130" stroke="#d9d2c4" stroke-width="1"/>
+
+  <!-- main statement -->
+  <text x="80" y="300" font-family="Inter, Helvetica, sans-serif"
+        font-size="82" font-weight="500" fill="#14110f"
+        letter-spacing="-2">I LIKE FIGURING OUT</text>
+  <text x="80" y="400" font-family="Instrument Serif, Georgia, serif"
+        font-style="italic" font-size="94" fill="#14110f"
+        letter-spacing="-1">how things work.</text>
+
+  <!-- footer metadata -->
+  <line x1="80" y1="500" x2="1120" y2="500" stroke="#d9d2c4" stroke-width="1"/>
+  <text x="80" y="535" font-family="Inter, Helvetica, sans-serif"
+        font-size="15" letter-spacing="3" fill="#57514a"
+        font-weight="500">SOFTWARE / SYSTEMS / AI</text>
+  <text x="1120" y="535" text-anchor="end"
+        font-family="ui-monospace, monospace"
+        font-size="14" letter-spacing="2" fill="#8a837a">v2.026</text>
+
+  <!-- small accent square -->
+  <rect x="80" y="565" width="8" height="8" fill="#8a3324"/>
+</svg>

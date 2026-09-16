@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BootSequence from '../components/BootSequence.astro';
+import Navigation from '../components/Navigation.astro';
+import Hero from '../components/Hero.astro';
+import Philosophy from '../components/Philosophy.astro';
+import Projects from '../components/Projects.astro';
+import Experiments from '../components/Experiments.astro';
+import Currently from '../components/Currently.astro';
+import About from '../components/About.astro';
+import Skills from '../components/Skills.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import TimeTravel from '../components/TimeTravel.astro';
+import RetroSite from '../components/RetroSite.astro';
+---
+
+<Layout>
+  <BootSequence />
+
+  <div class="modern-site site">
+    <Navigation />
+    <main>
+      <Hero />
+      <Philosophy />
+      <Projects />
+      <Experiments />
+      <Currently />
+      <About />
+      <Skills />
+      <Contact />
+    </main>
+    <Footer />
+  </div>
+
+  <RetroSite />
+  <TimeTravel />
+
+  <script>
+    import '../scripts/boot';
+    import '../scripts/timeTravel';
+    import '../scripts/easterEggs';
+
+    // Reveal-on-scroll for [data-reveal] elements
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-in');
+            io.unobserve(entry.target);
+          }
+        }
+      },
+      { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }
+    );
+    document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
+  </script>
+</Layout>

@@ -1,0 +1,15 @@
+---
+import { site } from '../data/site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>&copy; {year} {site.name}</span>
+    <span>{site.bios.system} / {site.bios.version}</span>
+    <button type="button" data-time-travel class="meta" style="letter-spacing:inherit">
+      Time travel &rarr;
+    </button>
+  </div>
+</footer>

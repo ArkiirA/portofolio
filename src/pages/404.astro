@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="404 — Not Found">
+  <div class="container" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;">
+    <p class="meta">ERROR 404 / NOT FOUND</p>
+    <h1 class="hero__statement" style="margin-top:2rem;">
+      THIS PAGE<br />
+      <em>doesn't exist.</em>
+    </h1>
+    <p style="margin-top:2rem;max-width:42ch;color:var(--graphite);">
+      Whatever you were looking for isn't here. It may have been moved, renamed,
+      or never existed at all.
+    </p>
+    <p style="margin-top:2rem;">
+      <a class="project__cta" href="/">&larr; Back to the index</a>
+    </p>
+  </div>
+</Layout>

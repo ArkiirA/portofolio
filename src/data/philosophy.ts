@@ -7,37 +7,25 @@ export type Principle = {
 export const philosophy: Principle[] = [
   {
     index: '01',
-    title: 'UNDERSTAND FIRST',
+    title: 'LOOK CLOSER',
     body: [
-      'I like knowing why something works',
-      'before deciding how to build it.',
+      'Understand before deciding.',
     ],
   },
   {
     index: '02',
-    title: 'BUILD TO LEARN',
+    title: 'QUESTION THE DEFAULT',
     body: [
-      'The fastest way I understand an idea',
-      'is usually to make something from it.',
+      'Existing solutions are a starting point,',
+      'not always the answer.',
     ],
   },
   {
     index: '03',
-    title: 'KEEP EXPERIMENTING',
+    title: 'MAKE IT YOURS',
     body: [
-      'Not every project needs to become',
-      'a product.',
-      '',
-      'Some things are built simply',
-      'to see what happens.',
+      'Function with purpose.',
+      'Character with intention.',
     ],
   },
-  {
-    index: '04',
-    title: 'MAKE IT USEFUL',
-    body: [
-      'Complexity is only valuable',
-      'when it solves something.',
-    ],
-  },
-];
+  ];

@@ -1,0 +1,46 @@
+---
+import { projects } from '../data/projects';
+---
+
+<section class="section" id="work" aria-labelledby="work-title">
+  <div class="container">
+    <header class="section__head">
+      <h2 class="section__title" id="work-title">Selected Work</h2>
+      <span class="meta">01 &mdash; 04</span>
+    </header>
+
+    <div class="projects__list">
+      {projects.map((p) => (
+        <article class="project" data-reveal>
+          <div>
+            <div class="project__meta">
+              <span class="project__index">{p.index}</span>
+              <span class="project__year">{p.year}</span>
+            </div>
+
+            {p.status && <span class="project__status">{p.status}</span>}
+
+            <h3 class="project__title">{p.title}</h3>
+            <p class="project__subtitle">{p.subtitle}</p>
+
+            <div class="project__stack" aria-label="Technology">
+              {p.stack.map((s) => <span>{s}</span>)}
+            </div>
+
+            <div class="project__desc">
+              {p.description.map((line) => <p>{line}</p>)}
+            </div>
+
+            <a class="project__cta" href={`#${p.slug}`}>
+              View Project &rarr;
+            </a>
+          </div>
+
+          <div class="project__media" role="img" aria-label={`${p.title} preview`}>
+            <span class="project__media-label">{p.title} / {p.year}</span>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

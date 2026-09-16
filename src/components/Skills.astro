@@ -1,0 +1,28 @@
+---
+import { skills } from '../data/site';
+---
+
+<section class="section" id="skills" aria-labelledby="skills-title">
+  <div class="container">
+    <header class="section__head">
+      <h2 class="section__title" id="skills-title">Index</h2>
+      <span class="meta">Technical</span>
+    </header>
+
+    <dl class="skills">
+      {skills.map((group) => (
+        <div class="skill">
+          <dt>{group.label}</dt>
+          <dd>
+            {group.items.map((item, i) => (
+              <>
+                {item}
+                {i < group.items.length - 1 ? ' / ' : ''}
+              </>
+            ))}
+          </dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+</section>

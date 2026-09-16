@@ -1,0 +1,27 @@
+---
+import { currently } from '../data/site';
+---
+
+<section class="section" id="currently" aria-labelledby="currently-title">
+  <div class="container">
+    <header class="section__head">
+      <h2 class="section__title" id="currently-title">Currently</h2>
+      <span class="meta">Live</span>
+    </header>
+
+    <dl class="currently" data-reveal>
+      <div class="currently__item">
+        <dt>Learning</dt>
+        <dd>{currently.learning}</dd>
+      </div>
+      <div class="currently__item">
+        <dt>Building</dt>
+        <dd>{currently.building}</dd>
+      </div>
+      <div class="currently__item">
+        <dt>Exploring</dt>
+        <dd>{currently.exploring}</dd>
+      </div>
+    </dl>
+  </div>
+</section>

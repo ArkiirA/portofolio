@@ -1,0 +1,32 @@
+---
+import { site } from '../data/site';
+---
+
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <header class="section__head">
+      <h2 class="section__title" id="contact-title">Contact</h2>
+      <span class="meta">04 / 04</span>
+    </header>
+
+    <p class="contact__statement" data-reveal>
+      Have something<br />
+      <em>worth building?</em>
+    </p>
+
+    <div class="contact__links">
+      <a class="contact__email" href={`mailto:${site.email}`}>
+        {site.email}
+      </a>
+
+      <div class="contact__social">
+        <a href={site.social.linkedin} rel="noopener noreferrer" target="_blank">
+          LinkedIn &rarr;
+        </a>
+        <a href={site.social.github} rel="noopener noreferrer" target="_blank">
+          GitHub &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
