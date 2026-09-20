@@ -154,7 +154,7 @@ button {
   gap: var(--s-3);
   padding-bottom: var(--s-3);
   border-bottom: 1px solid var(--rule);
-  margin-bottom: clamp(2.5rem, 6vw, 5rem);
+  margin-bottom: 2rem;
 }
 
 .section__title {

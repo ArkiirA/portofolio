@@ -14,10 +14,10 @@ type BootLine = {
 };
 
 const LINES: BootLine[] = [
-  { label: 'CPU', value: '............', status: 'OK' },
-  { label: 'MEMORY', value: '.........', status: 'OK' },
-  { label: 'STORAGE', value: '........', status: 'OK' },
-  { label: 'DISPLAY', value: '........', status: 'OK' },
+  { label: 'CURIOUSITY', value: '............', status: 'OK' },
+  { label: 'PATIENCE', value: '.........', status: 'OK' },
+  { label: 'COFFEE', value: '........', status: 'OK' },
+  { label: 'SLEEP', value: '........', status: 'LOW' },
 ];
 
 const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));

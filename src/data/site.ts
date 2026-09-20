@@ -3,8 +3,8 @@ export const site = {
   title: 'Rifki Rabbani — Software / Systems / AI',
   description:
     'Personal portfolio of Rifki Rabbani — software, systems, AI experiments, and things built along the way.',
-  url: 'https://rifkirabbani.example',
-  email: 'hello@example.com',
+  url: 'https://rifkirabbani.com',
+  email: 'rifki260405@gmail.com',
   location: 'Indonesia',
   age: 21,
   social: {
@@ -12,7 +12,7 @@ export const site = {
     linkedin: 'https://linkedin.com/',
   },
   bios: {
-    version: 'v2.026',
+    version: 'v26.04',
     system: 'RIFKI SYSTEMS',
     subtitle: 'PERSONAL WORKSTATION',
   },

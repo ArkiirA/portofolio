@@ -7,14 +7,15 @@ export type Principle = {
 export const philosophy: Principle[] = [
   {
     index: '01',
-    title: 'LOOK CLOSER',
+    title: 'OBSERVE',
     body: [
-      'Understand before deciding.',
+      'Look before building.',
+      'The problem is rarely where it first appears.',
     ],
   },
   {
     index: '02',
-    title: 'QUESTION THE DEFAULT',
+    title: 'BREAK THE PATTERN',
     body: [
       'Existing solutions are a starting point,',
       'not always the answer.',
@@ -24,8 +25,8 @@ export const philosophy: Principle[] = [
     index: '03',
     title: 'MAKE IT YOURS',
     body: [
-      'Function with purpose.',
-      'Character with intention.',
+      'Purpose in function.',
+      'Intention in every detail.',
     ],
   },
   ];
