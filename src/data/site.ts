@@ -9,8 +9,8 @@ export const site = {
   location: 'Indonesia',
   age: 21,
   social: {
-    github: 'https://github.com/',
-    linkedin: 'https://linkedin.com/',
+    github: 'https://github.com/ArkiirA/',
+    linkedin: 'https://www.linkedin.com/in/rifki-rabbani-097296398/',
   },
   bios: {
     version: 'v26.04',
