@@ -203,16 +203,25 @@ export function initTimeTravel(): void {
       });
     });
 
-  // Restore state from hash on load
-  if (window.location.hash === HASH_RETRO) {
-    document.body.classList.add(RETRO_CLASS);
-  }
-}    
-    if (typeof window !== 'undefined') {
+  // Restore state from hash on load, and react only to the two
+  // dedicated mode hashes. Any other hash (e.g. #retro-about from an
+  // in-page nav link) is a normal anchor jump and must not switch modes.
+  const restore = () => {
+    if (window.location.hash === HASH_RETRO) {
+      document.body.classList.add(RETRO_CLASS);
+    } else if (window.location.hash === HASH_MODERN) {
+      document.body.classList.remove(RETRO_CLASS);
+    }
+  };
+  restore();
+  window.addEventListener('hashchange', restore);
+  initRetroSoundToggle();
+  initRetroCounter();}
+
+if (typeof window !== 'undefined') {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initTimeTravel);
   } else {
     initTimeTravel();
   }
 }
-
