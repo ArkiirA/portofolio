@@ -91,7 +91,7 @@ export const projects: Project[] = [
     status: 'EXPERIMENT',
     stack: ['Ollama', 'LLMs', 'RAG', 'Vector DB', 'Pi'],
     description: [
-      'A growing set of experiments running language models locally — no cloud, no API keys.',
+      'A growing set of experiments running LLMs locally.',
       'Exploring retrieval-augmented generation, small agentic loops, and how far a laptop can go.',
     ],
     retro: {
