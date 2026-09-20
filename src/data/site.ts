@@ -3,7 +3,8 @@ export const site = {
   title: 'Rifki Rabbani — Software / Systems / AI',
   description:
     'Personal portfolio of Rifki Rabbani — software, systems, AI experiments, and things built along the way.',
-  url: 'https://rifkirabbani.com',
+  // TODO: replace YOUR-USERNAME with your actual GitHub username (or your custom domain, if you set one up later)
+  url: 'https://YOUR-USERNAME.github.io/rifki-portfolio',
   email: 'rifki260405@gmail.com',
   location: 'Indonesia',
   age: 21,

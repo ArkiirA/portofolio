@@ -53,7 +53,7 @@ import { projects } from '../data/projects';
 	<div class="project__media">
   {p.image ? (
     <img
-      src={p.image}
+      src={`${import.meta.env.BASE_URL}${p.image}`}
       alt={`${p.title} — ${p.subtitle}`}
       loading="lazy"
       decoding="async"

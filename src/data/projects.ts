@@ -34,7 +34,7 @@ export const projects: Project[] = [
       'Built to replace fragmented spreadsheets with a single, auditable source of truth.',
       'Designed around access control, traceability, and clean data entry.',
     ],
-    image: '/images/HKI.jpg',
+    image: 'images/HKI.jpg',
     retro: {
       title: "RIFKI'S AMAZING COMPUTER PROJECT!!!",
       tagline: 'SENTRA HKI v1.0',
@@ -53,7 +53,7 @@ export const projects: Project[] = [
       'The official web platform for the AIT Alumni Association Indonesia Chapter.',
       'It serves as a member directory and organizational hub.',
     ],
-    image: '/images/AITAA.jpg',
+    image: 'images/AITAA.jpg',
     retro: {
       title: 'AITAA WEB PAGE',
       tagline: 'AITAA v0.9',
