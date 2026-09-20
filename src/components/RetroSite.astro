@@ -66,9 +66,20 @@ import { philosophy } from '../data/philosophy';
           <p style="font-size:12px;color:#c0c0c0;">
             {p.stack.join(' / ')}
           </p>
-          <a class="retro-download" href="#retro-projects">
-            &#128190; DOWNLOAD
-          </a>
+          {p.link ? (
+            <a
+              class="retro-download"
+              href={p.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              &#128190; VISIT SITE
+            </a>
+          ) : (
+            <span class="retro-download retro-download--disabled" aria-disabled="true">
+              &#128274; SOURCE PRIVATE
+            </span>
+          )}
         </article>
       ))}
     </section>
@@ -155,13 +166,11 @@ import { philosophy } from '../data/philosophy';
   Sound: OFF
 </button>
       <div class="retro-webring">
-  &#9670; This site is part of the <a href="#retro-about">INDONESIAN DEV WEBRING</a> &#9670;
+  &#9670; A PROUD MEMBER OF THE (IMAGINARY) INDONESIAN DEV WEBRING &#9670;
   <br />
-  <a href="#retro-about">&laquo; Prev</a>
-  &middot;
-  <a href="#retro-about">Random</a>
-  &middot;
-  <a href="#retro-about">Next &raquo;</a>
+  <span class="retro-webring__note">&laquo; Prev &middot; Random &middot; Next &raquo;</span>
+  <br />
+  <span class="retro-webring__note">(this ring only has one site on it)</span>
 </div>
     </footer>
   </div>
