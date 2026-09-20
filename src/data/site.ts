@@ -5,7 +5,7 @@ export const site = {
     'Personal portfolio of Rifki Rabbani — software, systems, AI experiments, and things built along the way.',
   // TODO: replace ArkiirA with your actual GitHub username (or your custom domain, if you set one up later)
   url: 'https://ArkiirA.github.io/portofolio',
-  email: 'rifki260405@gmail.com',
+  email: 'tarakarifkir@gmail.com',
   location: 'Indonesia',
   age: 21,
   social: {
