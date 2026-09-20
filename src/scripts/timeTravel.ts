@@ -204,22 +204,15 @@ export function initTimeTravel(): void {
     });
 
   // Restore state from hash on load
-  const restore = () => {
-    if (window.location.hash === HASH_RETRO) {
-      document.body.classList.add(RETRO_CLASS);
-    } else {
-      document.body.classList.remove(RETRO_CLASS);
-    }
-  };
-  restore();
-  window.addEventListener('hashchange', restore);
-  initRetroSoundToggle();
-  initRetroCounter();}
-
-if (typeof window !== 'undefined') {
+  if (window.location.hash === HASH_RETRO) {
+    document.body.classList.add(RETRO_CLASS);
+  }
+}    
+    if (typeof window !== 'undefined') {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initTimeTravel);
   } else {
     initTimeTravel();
   }
 }
+
