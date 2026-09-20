@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://arkiira.github.io/rifki-portfolio/sitemap-index.xml
+Sitemap: https://ArkiirA.github.io/portofolio/sitemap-index.xml

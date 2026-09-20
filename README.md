@@ -14,6 +14,6 @@ Personal portfolio site built with [Astro](https://astro.build).
 ## Deployment
 
 This site is configured for GitHub Pages as a project page
-(`https://<username>.github.io/rifki-portfolio`). See `astro.config.mjs`
+(`https://<username>.github.io/portofolio`). See `astro.config.mjs`
 for the `site` and `base` settings, and `.github/workflows/deploy.yml`
 for the deploy workflow.

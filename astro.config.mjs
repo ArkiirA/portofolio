@@ -1,9 +1,8 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  // TODO: replace YOUR-USERNAME with your actual GitHub username
-  site: 'https://arkiira.github.io/rifki-portfolio',
-  base: '/rifki-portfolio/',
+  site: 'https://ArkiirA.github.io/portofolio',
+  base: '/portofolio/',
   output: 'static',
   build: {
     inlineStylesheets: 'auto',
